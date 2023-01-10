@@ -15,7 +15,6 @@ export default function AddProduct() {
 
   const fileHandler = (e) => {
     const { name, value, files } = e.target;
-
     switch (name) {
       case "file":
         setFile(files[0]);

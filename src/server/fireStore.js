@@ -53,3 +53,25 @@ export const uploadData = async (name, gender, option, price, id, imgUrl) => {
   };
   await setDoc(doc(db, "products", id), docData);
 };
+export const uploadBocket = async (
+  name,
+  gender,
+  size,
+  price,
+  imgUrl,
+  count,
+  user,
+  id
+) => {
+  const docData = {
+    gender: gender,
+    name: name,
+    size: size,
+    imgUrl: imgUrl,
+    count: count,
+    date: moment().format("YYYY MMMM Do, hh:mm:ss"),
+    price: price,
+    userId: user,
+  };
+  await setDoc(doc(db, "users", id), docData);
+};

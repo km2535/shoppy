@@ -1,0 +1,66 @@
+.container{
+  padding: 0px 20px 20px 20px;
+}
+.form{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.gender{
+  margin: 0 auto;
+  width: 90%;
+  font-size: 14px;
+  color: #5d5d5d;
+  margin-bottom: 20px;
+}
+.img{
+  width: 45%;
+}
+.describe{
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.name, .price,.txt{
+  color: #000;
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.price{
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d3cccc;
+}
+.txt{
+  font-size: 18px;
+  color: #666;
+}
+.option{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #e15050;
+}
+.select{
+  width: 80%;
+  height: 30px;
+  border: 2px dashed #e15050;
+}
+.btn{
+  border: none;
+  width: 80%;
+  height: 40px;
+  margin: 20px auto;
+  background-color: #e77171;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #e35858;
+
+}

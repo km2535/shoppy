@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { firebaseLogout, googleLogin } from "../../server/login";
 import { useAuthContext } from "../context/AuthContext";
 import styles from "./Navbar.module.css";
+import { FiShoppingBag, FiShoppingCart, FiEdit } from "react-icons/fi";
+import { useTotalCartContext } from "../context/TotalCartContext";
 
 export default function Navbar() {
   const { fbuser } = useAuthContext();
+  const { total } = useTotalCartContext();
   const navigate = useNavigate();
 
   const loginHandler = () => {
@@ -14,27 +17,59 @@ export default function Navbar() {
   const logoutHandler = () => {
     firebaseLogout();
   };
-  const upload = () => {
-    navigate("/product/addProduct");
-  };
   return (
     <nav className={styles.nav}>
       <ul className={styles.ul}>
         <div className={styles.logo}>
-          <li onClick={() => navigate("/")}>logo</li>
+          <li onClick={() => navigate("/")} className={styles.icon}>
+            <FiShoppingBag />
+            Shoppy
+          </li>
         </div>
         <div className={styles.info}>
-          <li>shopingList</li>
+          <li className={styles.products} onClick={() => navigate("/products")}>
+            Products
+          </li>
           {fbuser ? (
             <>
-              {fbuser?.isAdmin ? <li onClick={upload}>edit</li> : ""}
+              {fbuser?.isAdmin ? (
+                <>
+                  <li
+                    onClick={() => navigate("/shopingList")}
+                    className={styles.products}
+                  >
+                    <FiShoppingCart />
+                  </li>
+                  <div className={styles.totalCnt}>{total}</div>
+                  <li
+                    onClick={() => navigate("/product/addProduct")}
+                    className={styles.products}
+                  >
+                    <FiEdit />
+                  </li>
+                </>
+              ) : (
+                ""
+              )}
               <li>
-                <img src={fbuser.photoURL} alt="" />
+                <img src={fbuser.photoURL} alt="" className={styles.img} />
               </li>
-              <li onClick={logoutHandler}>logout</li>
+              <li className={styles.name}>{fbuser.displayName}</li>
+
+              <input
+                className={styles.btn}
+                type={"button"}
+                value={"Logout"}
+                onClick={logoutHandler}
+              />
             </>
           ) : (
-            <li onClick={loginHandler}>login</li>
+            <input
+              className={styles.btn}
+              type={"button"}
+              value={"Login"}
+              onClick={loginHandler}
+            />
           )}
         </div>
       </ul>

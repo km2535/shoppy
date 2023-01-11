@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+.imgContent{
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img{
+  width: 100%;
+}
+.info{
+  width: 50%;
+  padding: 20px;
+}
+.name{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.size{
+  margin: 0;
+  color: rgb(240, 105, 105);
+  font-size: 24px;
+  font-weight: 600;
+}
+.price{
+  margin: 0;
+  font-weight: 600;
+  font-size:18px;
+}
+.quantity{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10%;
+}
+.plus, .cnt, .minus, .trash{
+  font-size: 20px;
+  cursor: pointer;
+}
+.plus:hover, .minus:hover, .trash:hover{
+  color:rgb(240, 105, 105);
+}

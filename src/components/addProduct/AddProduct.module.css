@@ -1,0 +1,40 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.thumbnail{
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+.file,.name,.price,.genderm,.describe,.option {
+  border: 1px solid #c5c5c5;
+  padding: 10px;
+  height: 50px;
+  font-size: 18px;
+}
+.gender{
+  display: flex;
+}
+.file{
+  line-height: 50px;
+}
+.btn{
+  background-color: rgb(247, 161, 161);
+  border: none;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(247, 133, 133);
+}

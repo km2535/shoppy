@@ -1,0 +1,56 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.thumbnail{
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.form{
+  border-top:  1px solid #d3cccc;
+  border-bottom:  1px solid #d3cccc;
+}
+.priceInfo{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+.price,.delivery,.totalPrice{
+  width: 100px;
+  text-align: center;
+  padding: 20px;
+  background-color: #faf8f8;
+  border-radius: 15px;
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+}
+.num{
+  color: rgb(240, 105, 105);
+  font-size: 20px;
+  font-weight: 600;
+}
+.order{
+  width: 90%;
+  margin: 10px auto 30px auto;
+}
+.input{
+  width: 100%;
+  background-color: rgb(243, 130, 130);
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.input:hover{
+  
+  background-color: rgb(240, 105, 105);
+}

@@ -3,18 +3,70 @@
   width: 100%;
 }
 .ul{
-  width: 100%;
+  width: 90%;
+  margin: 10px auto;
   list-style: none;
   display: flex;
+  padding: 5px 0;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d3cccc;
 }
 .logo{
   width: 70%;
 }
 .info{
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: right;
+  align-items: center;
+  padding: 0 10px;
 }
+.icon{
+  font-size: 24px;
+  width: max-content;
+  cursor: pointer;
+  color: rgb(223, 149, 149);
+}
+.img{
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.products{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.btn{
+  border: none;
+  background-color: rgb(240, 105, 105);
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(247, 121, 121);
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+}
+.totalCnt{
+  background-color: rgb(240, 121, 121);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  left: -20px;
+  top: -10px;
+}
+

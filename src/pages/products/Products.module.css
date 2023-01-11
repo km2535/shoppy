@@ -1,0 +1,42 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content{
+  width: 23.5%;
+  padding: 10px;
+  transition: scale .2s;
+}
+.content:hover{
+  scale: 1.02;
+}
+.card{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px  rgb(202, 200, 200);
+}
+.imgContent{
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.img{
+  width: 100%;
+}
+.description{
+  padding: 5px 5px 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 18px;
+  font-weight: 500;
+}
+.gender{
+  padding: 0 5px 5px 5px;
+  font-size: 14px;
+  color: #5d5d5d;
+}

@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { uploadData } from "./fireStore";
 
-export const upload = async (file, name, gender, option, price) => {
+export const upload = async (file, name, gender, option, price, describe) => {
   const id = uuidv4();
   let formData = new FormData();
   formData.append("file", file);
@@ -13,6 +13,8 @@ export const upload = async (file, name, gender, option, price) => {
     body: formData,
   })
     .then((data) => data.json())
-    .then((img) => uploadData(name, gender, option, price, id, img.url))
+    .then((img) =>
+      uploadData(name, gender, option, price, id, img.url, describe)
+    )
     .catch((err) => console.log(err));
 };

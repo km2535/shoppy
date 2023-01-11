@@ -26,18 +26,23 @@ export default function ProductDetail() {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    uploadBocket(
-      name,
-      gender,
-      size,
-      price,
-      imgUrl,
-      fbuser?.email,
-      id,
-      describe,
-      fbuser?.uid
-    ).then(() => setIsLoading(false));
+
+    if (fbuser !== null) {
+      setIsLoading(true);
+      uploadBocket(
+        name,
+        gender,
+        size,
+        price,
+        imgUrl,
+        fbuser?.email,
+        id,
+        describe,
+        fbuser?.uid
+      ).then(() => setIsLoading(false));
+    } else {
+      alert("로그인 후 이용해주세요");
+    }
   };
   return (
     <div className={styles.container}>

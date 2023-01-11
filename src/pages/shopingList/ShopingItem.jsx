@@ -4,7 +4,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { deleteCart, updateBocket } from "../../server/database";
 import styles from "./shopingItem.module.css";
 
-export default function ShopingItem({ product, uid, key, reReader }) {
+export default function ShopingItem({ product, uid, reReader }) {
   const { id, name, price, size, imgUrl, count } = product;
   const [cnt, setCnt] = useState(count);
   const deleteHandler = () => {

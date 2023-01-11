@@ -32,15 +32,15 @@ export default function Navbar() {
           </li>
           {fbuser ? (
             <>
+              <li
+                onClick={() => navigate("/shopingList")}
+                className={styles.products}
+              >
+                <FiShoppingCart />
+              </li>
+              <div className={styles.totalCnt}>{total}</div>
               {fbuser?.isAdmin ? (
                 <>
-                  <li
-                    onClick={() => navigate("/shopingList")}
-                    className={styles.products}
-                  >
-                    <FiShoppingCart />
-                  </li>
-                  <div className={styles.totalCnt}>{total}</div>
                   <li
                     onClick={() => navigate("/product/addProduct")}
                     className={styles.products}
